@@ -24,9 +24,7 @@
   ```
   或任何 SOCKS5 代理（Clash/v2rayN 等，改 `proxyPort` 即可）。
 
-## 安装
-
-### 方式 A：从 GitHub 安装（推荐）
+## 安装（GitHub）
 
 ```sh
 dsh plugin --profile web add github:zhaopw5/dsh-socks5-proxy#<commit号>
@@ -36,20 +34,6 @@ dsh plugin --profile web add github:zhaopw5/dsh-socks5-proxy#<commit号>
 
 > 本仓库的 `lib/`（构建产物）已提交，**无需构建脚本**，因此不会触发 pnpm 的
 > `allowBuilds` 批准——安装即用。
-
-### 方式 B：发布到 npm
-
-```sh
-npm publish   # 或 pnpm publish（先 npm run build）
-dsh plugin --profile web add dsh-socks5-proxy
-```
-
-### 方式 C：本地 tarball
-
-```sh
-pnpm pack
-dsh plugin --profile web add ./dsh-socks5-proxy-0.1.0.tgz
-```
 
 ## 使用（两步）
 
