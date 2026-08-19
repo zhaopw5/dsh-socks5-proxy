@@ -1,0 +1,35 @@
+{
+  "name": "dsh-socks5-proxy",
+  "version": "0.1.0",
+  "description": "DSH 插件：让 web_fetch 通过本地 SOCKS5 代理（如 ssh -D 8081 隧道）抓取被墙站点。零运行时依赖。",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "node --experimental-strip-types test/headless-test.ts"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "plugin",
+    "bundle",
+    "socks5",
+    "proxy",
+    "web-fetch"
+  ],
+  "license": "MIT"
+}

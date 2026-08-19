@@ -1,0 +1,10 @@
+# dsh-socks5-proxy bundle 补丁层。
+#
+# 只做一件事：把 socks5-proxy 插件行插进装配树（注册 http-proxy fetch provider）。
+# 插件行用「包名」而非文件路径，Node 会从宿主（dsh 安装）解析该包。
+#
+# 注意：本补丁【不】钉选 fetchProvider、也【不】开启 web_fetch 工具——
+# 那些属于用户部署的偏好，写进用户自己的 profile patch（见 README「使用」一节）。
+- insert:
+    - id: socks5-proxy
+      name: dsh-socks5-proxy

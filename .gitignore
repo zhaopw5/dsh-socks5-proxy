@@ -1,0 +1,7 @@
+# 本地构建/开发产物与依赖，不入库
+node_modules/
+*.tsbuildinfo
+*.bak
+.DS_Store
+
+# 保留 lib/（构建产物随仓库提交，让 git 安装免构建、免 allowBuilds 批准）
