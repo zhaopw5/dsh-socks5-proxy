@@ -29,8 +29,10 @@
 ### 方式 A：从 GitHub 安装（推荐）
 
 ```sh
-dsh plugin --profile web add github:你的用户名/dsh-socks5-proxy#<commit号>
+dsh plugin --profile web add github:zhaopw5/dsh-socks5-proxy#<commit号>
 ```
+
+仓库地址：https://github.com/zhaopw5/dsh-socks5-proxy
 
 > 本仓库的 `lib/`（构建产物）已提交，**无需构建脚本**，因此不会触发 pnpm 的
 > `allowBuilds` 批准——安装即用。
