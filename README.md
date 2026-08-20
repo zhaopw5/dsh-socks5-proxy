@@ -94,6 +94,22 @@ node test/headless-test.ts
 | `fallbackToDirect` | `false` | 代理不可达时回退直连（被墙站点直连仍会失败，但报错更明确） |
 | `enabled` | `true` | `false` 时不注册 provider |
 
+### 改默认端口
+
+**1. 打开这个文件**（用编辑器）：
+```
+~/.dsh/profiles/web/cordis.patch.yml
+```
+
+**2. 在文件末尾加这几行**：
+```yaml
+- id: socks5-proxy
+  config:
+    proxyPort: 8082
+```
+
+**3. 重启 `dsh web`**，日志变成 `socks5://127.0.0.1:8082` 就成了。
+
 ## 故障排查
 
 | 现象 | 原因 / 处理 |
